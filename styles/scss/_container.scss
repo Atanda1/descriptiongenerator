@@ -1,0 +1,8 @@
+.inner{
+	&__container {
+		grid-column: col-start/col-end;
+		&__logo {
+			margin: 0 auto;
+		}
+}
+}

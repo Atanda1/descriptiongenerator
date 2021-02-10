@@ -1,0 +1,23 @@
+{
+  "name": "descriptiongenerator",
+  "version": "1.0.0",
+  "description": "Job decription generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch styles/scss/_main.scss:styles/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atanda1/descriptiongenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Atanda1/descriptiongenerator/issues"
+  },
+  "homepage": "https://github.com/Atanda1/descriptiongenerator#readme",
+  "dependencies": {
+    "sass": "^1.32.7"
+  }
+}
