@@ -6,6 +6,8 @@ $dark-light :  #2A2F32;
 $holder-background: #262D31;
 $dark-black : #131C21;
 $thin-font: 200;
+$grey-color: #787676;
+$grey-ish: #F8F8F8;
 $font-colour: #B1B3B5;
 $holder-font-colour: #B3B6B8;
 $holder-small-font-colour: #989A9D;
@@ -13,14 +15,17 @@ $text-font-family: Source Sans Pro;
 $dark-scroll:#394045;
 $text-font-colour: #6B7C93;
 $small-font: 1.1rem;
-$small: 300px;
-$medium: 1200px;
-$large: 2000px;
+$small: 500px;
+$blue: #004AC4;
 $mint: #056162;
+$medium: 1000px;
+$mid-big: 850px;
+$small-mid: 700px;
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins|Source+Sans+Pro&display=swap');
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,10 +36,10 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
+article, aside, canvas, button, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, select, input {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -44,7 +49,8 @@ time, mark, audio, video {
     margin-block-start: 0;
     margin-block-end: 0;
     display: block;
-    font-family: 'Segoe UI', 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: 'DM Mono', monospace;
     // color: $font-colour;
  //   outline: 2px solid red;
 }

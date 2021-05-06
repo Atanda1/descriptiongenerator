@@ -1,13 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins|Source+Sans+Pro&display=swap");
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
-.container {
-  display: grid;
-  height: 100vh;
-  grid-template-rows: min-content repeat(5, min-content) 23vh;
-  grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
-}
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,10 +11,10 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
+article, aside, canvas, button, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, select, input {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,7 +23,8 @@ time, mark, audio, video {
   margin-block-start: 0;
   margin-block-end: 0;
   display: block;
-  font-family: "Segoe UI", "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-family: "DM Mono", monospace;
 }
 
 html {
@@ -75,11 +70,119 @@ q:before, q:after {
   content: none;
 }
 
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: min-content repeat(5, min-content) 23vh;
+  grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 20vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 33vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (max-width: 850px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 40vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 45vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+  }
+}
+
 .inner__container {
   grid-column: col-start/col-end;
 }
+.inner__container img {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+}
+.inner__container__reach {
+  display: flex;
+  justify-content: space-between;
+  color: #787676;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-bottom: 4rem;
+}
+.inner__container__form {
+  text-align: left;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 10px rgba(120, 118, 118, 0.25);
+  border-radius: 10px;
+  padding: 3rem 2rem 5rem 2rem;
+}
+.inner__container__form__label {
+  font-family: "DM Mono", monospace;
+  margin-bottom: 0.7rem;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.6rem;
+  padding-top: 2rem;
+}
+.inner__container__form__dropdown {
+  font-family: "DM Mono", monospace;
+  width: 100%;
+  background-color: #F8F8F8;
+  height: 5.3rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0 2.5rem 0 2.5rem;
+  background: url("../../assets/dropdown.svg") no-repeat scroll right center #F8F8F8;
+  background-position: 94% 50%;
+  color: #6C757D;
+}
+.inner__container__form__button {
+  background-color: #004AC4;
+  color: white;
+  width: 100%;
+  height: 5.3rem;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+}
+.inner__container__form__input {
+  font-family: "DM Mono", monospace;
+  font-size: 1.5rem;
+  width: 100%;
+  background-color: #F8F8F8;
+  height: 5.3rem;
+  border-radius: 5px;
+  border: none;
+  padding-left: 2.5rem;
+  color: #6C757D;
+}
+.inner__container__form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
 .inner__container__logo {
   margin: 0 auto;
+}
+.inner__container__title {
+  font-family: "DM Mono", monospace;
+  font-weight: 600;
+  font-size: 2.6rem;
+}
+.inner__container__intro {
+  padding: 2rem 0 2rem 0;
+  color: #787676;
+  font-family: DM Mono;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

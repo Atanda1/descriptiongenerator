@@ -2,12 +2,18 @@
 	display: grid;
 	height: 100vh;
 	grid-template-rows: min-content repeat(5, min-content) 23vh;
-	grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+	grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 20vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
 
-//  @media screen and (max-width: $medium) {
-// 		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 43vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
-//  }
-//  @media screen and (min-width: $large) {
-// 		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 28vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
-//  }
+ @media screen and (max-width: $medium) {
+		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 33vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+ }
+ @media screen and (max-width: $mid-big) {
+		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 38vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+ }
+ @media screen and (max-width: $small-mid) {
+	grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 40vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+}
+@media screen and (max-width: $small) {
+	grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(2, [inner-col-start] minmax(min-content, 45vw) [inner-col-end]) [col-end] minmax(1rem, auto) [full-end];
+}
 }
